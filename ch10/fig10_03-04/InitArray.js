@@ -2,13 +2,13 @@
 // Create two arrays, initialize their elements and display them
 function start()
 {
-   var n1 = new Array( 4 ); // allocate five-element array
+   var n1 = new Array( 5 ); // allocate five-element array
    var n2 = new Array(); // allocate empty array    
        
    // assign values to each element of array n1  
    var length = n1.length; // get array's length once before the loop
 
-   for ( var i = 0; i < 5; ++i ) 
+   for ( var i = 0; i < n1.length; ++i ) 
    {
       n1[ i ] = i;
    } // end for
