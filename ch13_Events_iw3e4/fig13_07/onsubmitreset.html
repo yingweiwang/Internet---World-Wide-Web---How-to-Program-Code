@@ -1,0 +1,92 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 13.7: onsubmitreset.html -->
+<!-- Demonstrating the onsubmit and onreset events. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>A Form Using onsubmit and onreset</title>
+      <style type = "text/css">
+         .tip { font-family: sans-serif;
+                color: blue;
+                font-size: 12px }
+      </style>
+      <script type = "text/javascript">
+         <!--
+         var helpArray = 
+            [ "Enter your name in this input box.",
+              "Enter your e-mail address in this input box, " +
+              "in the format user@domain.",
+              "Check this box if you liked our site.",
+              "In this box, enter any comments you would " +
+              "like us to read.",
+              "This button submits the form to the " +
+              "server-side script.",
+              "This button clears the form.", 
+              "" ];
+
+         function helpText( messageNum ) 
+         {
+            document.getElementById( "tip" ).innerHTML =
+                helpArray[ messageNum ];
+         } // end function helpText
+
+         function registerEvents()
+         {
+            document.getElementById( "myForm" ).onsubmit = function()
+            {                                                         
+               return confirm( "Are you sure you want to submit?" );  
+            } // end anonymous function
+
+            document.getElementById( "myForm" ).onreset = function()
+            {
+               return confirm( "Are you sure you want to reset?" );  
+            } // end anonymous function
+         } // end function registerEvents
+         // -->
+      </script>
+   </head>
+   <body onload = "registerEvents()">
+      <form id = "myForm" action = "">
+         <div>
+         Name: <input type = "text" name = "name"                  
+            onfocus = "helpText(0)" onblur = "helpText(6)" /><br />
+         E-mail: <input type = "text" name = "e-mail" 
+            onfocus = "helpText(1)" onblur = "helpText(6)" /><br />
+         Click here if you like this site 
+         <input type = "checkbox" name = "like" onfocus =  
+            "helpText(2)" onblur = "helpText(6)" /><br /><hr />
+
+         Any comments?<br />
+         <textarea name = "comments" rows = "5" cols = "45"  
+            onfocus = "helpText(3)" onblur = "helpText(6)"></textarea>
+         <br />
+         <input type = "submit" value = "Submit" onfocus =  
+            "helpText(4)" onblur = "helpText(6)" />
+         <input type = "reset" value = "Reset" onfocus =  
+            "helpText(5)" onblur = "helpText(6)" />
+         </div>
+      </form>
+      <div id = "tip" class = "tip"></div>
+   </body>
+</html>
+
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2004 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

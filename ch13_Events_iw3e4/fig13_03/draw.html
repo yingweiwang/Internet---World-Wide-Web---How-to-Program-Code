@@ -1,0 +1,85 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 13.3: draw.html -->
+<!-- A simple drawing program. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Simple Drawing Program</title>
+      <style type = "text/css">
+         #canvas { width: 400px;
+                   border: 1px solid #999999;
+                   border-collapse: collapse }
+         td      { width: 4px;
+                   height: 4px }
+         th.key  { font-family: arial, helvetica, sans-serif;
+                   font-size: 12px; 
+                   border-bottom: 1px solid #999999 }
+      </style>
+      <script type = "text/javascript">
+         <!--
+         //initialization function to insert cells into the table
+         function createCanvas ()
+         {
+            var side = 100;
+            var tbody = document.getElementById( "tablebody" );
+          
+            for ( var i = 0; i < side; i++ )
+            {
+               var row = document.createElement( "tr" );
+               
+               for ( var j = 0; j < side; j++ )
+               {
+                  var cell = document.createElement( "td" );
+                  cell.onmousemove = processMouseMove;
+                  row.appendChild( cell );
+               } // end for
+
+               tbody.appendChild( row );
+            } // end for
+         } // end function createCanvas
+
+         // processes the onmousemove event
+         function processMouseMove( e )
+         {            
+            // get the event object from IE
+            if ( !e )
+               var e = window.event;
+
+            // turn the cell blue if the Ctrl key is pressed
+            if ( e.ctrlKey )
+               this.style.backgroundColor = "blue";
+         
+            // turn the cell red if the Shift key is pressed
+            if ( e.shiftKey )
+               this.style.backgroundColor = "red";
+         } // end function processMouseMove
+         // -->
+      </script>
+   </head>
+   <body onload = "createCanvas()">
+      <table id = "canvas" class = "canvas"><tbody id = "tablebody">
+      <tr><th class = "key" colspan = "100">Hold <tt>ctrl</tt>
+         to draw blue. Hold <tt>shift</tt> to draw red.</th></tr>
+      </tbody></table>
+   </body>
+</html>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2008 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

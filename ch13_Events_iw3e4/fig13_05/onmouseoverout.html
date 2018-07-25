@@ -1,0 +1,131 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig 13.5: onmouseoverout.html -->
+<!-- Events onmouseover and onmouseout. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Events onmouseover and onmouseout</title>
+      <style type = "text/css">
+         body  { background-color: wheat }
+         table { border-style: groove;
+                 text-align: center;
+                 font-family: monospace;
+                 font-weight: bold }
+         td    { width: 6em }
+      </style>
+      <script type = "text/javascript">
+         <!--
+         image1 = new Image();
+         image1.src = "heading1.gif";
+         image2 = new Image();
+         image2.src = "heading2.gif";
+
+         function mouseOver( e )
+         {
+            if ( !e )
+               var e = window.event;
+
+            var target = getTarget( e );
+            
+            // swap the image when the mouse moves over it
+            if ( target.id == "heading" )
+            {
+               target.src = image2.src;
+               return;
+            } // end if
+            
+            // if an element's id is defined, assign the id to its color
+            // to turn hex code's text the corresponding color
+            if ( target.id )
+                target.style.color = target.id;
+         } // end function mouseOver
+
+         function mouseOut( e )
+         {
+            if ( !e )
+               var e = window.event;
+
+            var target = getTarget( e );
+
+            // put the original image back when the mouse moves away
+            if ( target.id == "heading" )
+            {
+               target.src = image1.src;
+               return;
+            } // end if
+
+            // if an element's id is defined, assign id to innerHTML
+            // to display the color name
+            if ( target.id )
+               target.innerHTML = target.id;
+         } // end function mouseOut
+
+         // return either e.srcElement or e.target, whichever exists
+         function getTarget( e )
+         {
+            if ( e.srcElement )
+               return e.srcElement;
+            else
+               return e.target;
+         } // end function getTarget
+
+         document.onmouseover = mouseOver;
+         document.onmouseout = mouseOut;
+         // -->
+      </script>
+   </head>
+   <body>
+      <h1><img src = "heading1.gif" id = "heading" alt = "Heading Image" /></h1>
+      <p>Can you tell a color from its hexadecimal RGB code 
+      value? Look at the hex code, guess its color. To see 
+      what color it corresponds to, move the mouse over the 
+      hex code. Moving the mouse out of the hex code's table 
+      cell will display the color name.</p>
+      <table>
+         <tr>
+            <td id = "Black">#000000</td>
+            <td id = "Blue">#0000FF</td>
+            <td id = "Magenta">#FF00FF</td> 
+            <td id = "Gray">#808080</td>
+         </tr>
+         <tr>
+            <td id = "Green">#008000</td> 
+            <td id = "Lime">#00FF00</td> 
+            <td id = "Maroon">#800000</td>
+            <td id = "Navy">#000080</td> 
+         </tr>
+         <tr>
+            <td id = "Olive">#808000</td> 
+            <td id = "Purple">#800080</td>
+            <td id = "Red">#FF0000</td>
+            <td id = "Silver">#C0C0C0</td> 
+         </tr>
+         <tr>
+            <td id = "Cyan">#00FFFF</td>
+            <td id = "Teal">#008080</td>
+            <td id = "Yellow">#FFFF00</td> 
+            <td id = "White">#FFFFFF</td> 
+         </tr>
+      </table>
+   </body>
+</html>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2004 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

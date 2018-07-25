@@ -1,0 +1,65 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!-- Fig. 13.8: bubbling.html -->
+<!-- Canceling event bubbling. -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Event Bubbling</title>
+      <script type = "text/javascript">
+         <!--
+         function documentClick() 
+         {
+            alert( "You clicked in the document." );  
+         } // end function documentClick
+
+         function bubble( e )
+         {
+            if ( !e )
+               var e = window.event;
+            
+            alert( "This will bubble." );
+            e.cancelBubble = false;
+         } // end function bubble
+
+         function noBubble( e )
+         {
+            if ( !e )
+               var e = window.event;
+
+            alert( "This will not bubble." );
+            e.cancelBubble = true;
+         } // end function noBubble
+
+         function registerEvents()
+         {
+            document.onclick = documentClick;                        
+            document.getElementById( "bubble" ).onclick = bubble;    
+            document.getElementById( "noBubble" ).onclick = noBubble;
+         } // end function registerEvents
+         // -->
+      </script>
+   </head>
+   <body onload = "registerEvents()">
+      <p id = "bubble">Bubbling enabled.</p>
+      <p id = "noBubble">Bubbling disabled.</p>
+   </body>
+</html>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2004 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

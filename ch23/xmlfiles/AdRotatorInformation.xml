@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fig. 21.19: AdRotatorInformation.xml -->
+<!-- XML file containing advertisement information. -->
+<Advertisements>
+   <Ad>
+      <ImageUrl>Images/france.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/fr.html</NavigateUrl>
+      <AlternateText>France Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/germany.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/gm.html</NavigateUrl>
+      <AlternateText>Germany Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/italy.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/it.html</NavigateUrl>
+      <AlternateText>Italy Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/spain.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/sp.html</NavigateUrl>
+      <AlternateText>Spain Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/latvia.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/lg.html</NavigateUrl>
+      <AlternateText>Latvia Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/peru.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/pe.html</NavigateUrl>
+      <AlternateText>Peru Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/senegal.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/sg.html</NavigateUrl>
+      <AlternateText>Senegal Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/sweden.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/sw.html</NavigateUrl>
+      <AlternateText>Sweden Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/thailand.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/th.html</NavigateUrl>
+      <AlternateText>Thailand Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+
+   <Ad>
+      <ImageUrl>Images/unitedstates.png</ImageUrl>
+      <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/us.html</NavigateUrl>
+      <AlternateText>United States Information</AlternateText>
+      <Impressions>1</Impressions>
+   </Ad>
+</Advertisements>
